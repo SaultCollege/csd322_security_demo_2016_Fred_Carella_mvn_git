@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Demo</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5">  
+                <h:outputLabel id="o" value="Basic Input: "  />
+                <p:inplace  id="basic" widgetVar="basic1" style="tabindex:0">  
+                    <p:inputText value="Edit me" onblur="basic1.hide();" tabindex="1"/>  
+                </p:inplace> 
+                <p:inplace  id="basic2" widgetVar="basic2" style="tabindex:0">  
+                    <p:inputText value="Edit Me" onblur="basic2.hide();" tabindex="2"/>  
+                </p:inplace> 
+            </h:panelGrid>
+            <h:panelGrid columns="2" cellpadding="3">  
+                <p:inputText value="#{demo.hole1}" id='me'  tabindex="1" style="text-align: center;padding:0px;margin:2px;padding:0px;width:1.8em;height:1.4em;">  
+                <p:ajax event="blur"  update="me"/>
+                </p:inputText>                
+                <p:inputText value="#{demo.hole2}"  id='me2'  tabindex="1" style="text-align: center;padding:0px;margin:2px;padding:0px;width:1.8em;height:1.4em;">  
+                <p:ajax event="blur"  update="me2"/>  
+                </p:inputText>
+                <p:inputText value="#{demo.hole3}"  id='me3' tabindex="1" style="text-align: center;padding:0px;margin:2px;padding:0px;width:1.8em;height:1.4em;">
+                <p:ajax event="blur"  update="me3"/>  
+                </p:inputText>
+                <p:inputText value="#{demo.hole4}"  id='me4' tabindex="1" style="text-align: center;padding:0px;margin:2px;padding:0px;width:1.8em;height:1.4em;">  
+                <p:ajax event="blur"  update="me4"/>  
+                </p:inputText>
+            </h:panelGrid>
+            
+        </h:form>
+    </h:body>
+</html>
+
